@@ -19,6 +19,7 @@ def rorb(pid,at,bt,tq):
             elif check==0:
                 for i in process:
                     process[i]=[process[i][0],process[i][1],0]
+                check=1
         else:
             if(process[curr_job][1]<=tq):
                 for i in range(process[curr_job][1]):
@@ -48,4 +49,4 @@ def rorb(pid,at,bt,tq):
     print("Average TAT = ",sum(tat)/len(tat))
     print("Average WT = ",sum(wt)/len(wt))
 
-rorb(['p1','p2','p3','p4','p5'],[0,1,2,3,4],[5,3,1,2,3],2)
+rorb(['p1','p2','p3','p4','p5'],[0,11,12,3,14],[5,3,1,2,3],2)
